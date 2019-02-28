@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle="left" left>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>หน้าหลัก</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only (click)="login()">
+          <ion-icon name="unlock"></ion-icon> Login
+        </button>
+        <button ion-button icon-only (click)="logout()">
+          <ion-icon name="lock"></ion-icon> Logout
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <!--Slide-->
+    <ion-slides pager autoplay="3000" loop>
+      <ion-slide>
+        <img src="assets/imgs/slide1.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/slide2.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/slide3.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+  
+    <!-- Menu-->
+    <ion-grid>
+  
+      <ion-row>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="appstore"></ion-icon>&nbsp;&nbsp;Store
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="compass"></ion-icon>&nbsp;&nbsp;Direct
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="sunny"></ion-icon>&nbsp;&nbsp;Weather
+          </button>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="map"></ion-icon>&nbsp;&nbsp;Maps
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="cube"></ion-icon>&nbsp;&nbsp;Files
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="analytics"></ion-icon>&nbsp;&nbsp;Charts
+          </button>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="browsers"></ion-icon>&nbsp;&nbsp;Browser
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>
+            <ion-icon name="send"></ion-icon>&nbsp;&nbsp;Send
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block (click)="Scan()">
+            <ion-icon name="barcode"></ion-icon>&nbsp;&nbsp;Scan
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

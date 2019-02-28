@@ -1,0 +1,25 @@
+page-tab-home {
+  ion-slides {
+    height: 40vh;
+  }
+
+  ion-slide img {
+    min-width: 100%;
+  }
+
+  ion-col button {
+    height: 100px !important;
+    background-color: #E65100 !important;
+  }
+
+  ion-col button ion-icon {
+    font-size: 40px;
+    display: block !important;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .button-inner {
+    display: block !important;
+  }
+}
