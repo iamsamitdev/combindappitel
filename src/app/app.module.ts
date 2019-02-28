@@ -18,6 +18,19 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule } from '@angular/http';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
 import { LoginPage } from '../pages/login/login';
+import { LocationPage } from '../pages/location/location';
+import { CameraPage } from '../pages/camera/camera';
+
+/*** Geolocation Plugin ***/
+import { Geolocation } from '@ionic-native/geolocation'
+
+/*** Camera  ***/
+import { Camera } from '@ionic-native/camera';
+
+/*** File and Image upload ***/
+import { File } from '@ionic-native/file';
+import { FilePath } from '@ionic-native/file-path';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 @NgModule({
   declarations: [
@@ -32,7 +45,9 @@ import { LoginPage } from '../pages/login/login';
     TabArticlePage,
     TabContactPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    LocationPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -52,13 +67,20 @@ import { LoginPage } from '../pages/login/login';
     TabArticlePage,
     TabContactPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    LocationPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WebapiServiceProvider
+    WebapiServiceProvider,
+    Geolocation,
+    Camera,
+    File,
+    FilePath,
+    FileTransfer
   ]
 })
 export class AppModule {}

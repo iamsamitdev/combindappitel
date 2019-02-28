@@ -8,7 +8,7 @@ export class WebapiServiceProvider {
   baseURL:any;
 
   constructor(public http: Http) {
-    this.baseURL = "http://localhost/combindappapi/";
+    this.baseURL = "http://192.168.43.159/combindappapi/";
   }
 
   // Post Method

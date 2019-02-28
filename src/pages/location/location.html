@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h1>Show My Location</h1>
+<button ion-button (click)="showLocation()">Get Current Location</button>
+<p>
+    Latitude = {{ lat }}<br>
+    Longitude = {{ lon }}
+</p>
+
+<div #map id="map"></div>
+
+</ion-content>

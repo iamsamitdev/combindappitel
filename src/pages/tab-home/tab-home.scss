@@ -1,4 +1,10 @@
 page-tab-home {
+
+  ion-buttons{
+    padding-top: 10px !important;
+  }
+
+
   ion-slides {
     height: 40vh;
   }
@@ -21,5 +27,9 @@ page-tab-home {
 
   .button-inner {
     display: block !important;
+  }
+
+  .welcome{
+    color: white
   }
 }
