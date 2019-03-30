@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>งาน</ion-title>
+  </ion-navbar>
+
+  <!--- ส่วนการแสดง Tab งาน-->
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="jobs">
+      <ion-segment-button value="myjob">
+        งานของฉัน
+      </ion-segment-button>
+      <ion-segment-button value="alljobs">
+        งานทั้งหมด
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <!---- ส่วนนี้คือชุดคำสั่งสำหรับการทำ Refresh เมื่อทำการดึงหน้าจอลงมา -->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!--- ส่วนการแสดงเนื้อหาใน Tab-->
+  <div [ngSwitch]="jobs">
+    <ion-list *ngSwitchCase="'myjob'">
+      <ion-list-header>เฉพาะงานของฉัน</ion-list-header>
+
+      <ion-item  *ngFor="let mjob of responseData">
+        <ion-avatar item-start>
+          <img src="http://192.168.1.37/combindappapi/images/{{mjob.jobimage}}">
+        </ion-avatar>
+        <h2>{{mjob.jobstatus}}</h2>
+        <p>{{mjob.jobby}}</p>
+        <ion-note item-end>{{mjob.jobdate}}</ion-note>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'alljobs'">
+      <ion-list-header>งานทั้งหมดในระบบ</ion-list-header>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/logo.png">
+        </ion-avatar>
+        <h2>ชื่องานในระบบ</h2>
+        <p>ชื่อสกุลผู้แจ้ง</p>
+        <ion-note item-end>วันที่/เวลา</ion-note>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+</ion-content>

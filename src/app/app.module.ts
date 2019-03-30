@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+/***  Page ***/
 import { SideSchedulePage } from '../pages/side-schedule/side-schedule';
 import { SidePaymentPage } from '../pages/side-payment/side-payment';
 import { SidePortfolioPage } from '../pages/side-portfolio/side-portfolio';
@@ -20,6 +21,7 @@ import { WebapiServiceProvider } from '../providers/webapi-service/webapi-servic
 import { LoginPage } from '../pages/login/login';
 import { LocationPage } from '../pages/location/location';
 import { CameraPage } from '../pages/camera/camera';
+import { TabJobPage } from '../pages/tab-job/tab-job';
 
 /*** Geolocation Plugin ***/
 import { Geolocation } from '@ionic-native/geolocation'
@@ -48,7 +50,8 @@ import { FilePath } from '@ionic-native/file-path';
     TabsPage,
     LoginPage,
     LocationPage,
-    CameraPage
+    CameraPage,
+    TabJobPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { FilePath } from '@ionic-native/file-path';
     TabsPage,
     LoginPage,
     LocationPage,
-    CameraPage
+    CameraPage,
+    TabJobPage
   ],
   providers: [
     StatusBar,

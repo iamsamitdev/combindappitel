@@ -8,7 +8,7 @@ export class WebapiServiceProvider {
   baseURL:any;
 
   constructor(public http: Http) {
-    this.baseURL = "http://192.168.43.159/combindappapi/";
+    this.baseURL = "http://192.168.1.37/combindappapi/";
   }
 
   // Post Method
@@ -27,5 +27,22 @@ export class WebapiServiceProvider {
 
     });
   }
+
+  // Get Method
+  getData(segment){
+    return new Promise((resolve,reject) =>{
+      // กำหนด header
+      let headers = new Headers();
+      headers.append('Content-Type','application/json');
+
+      this.http.get(this.baseURL+segment,{headers:headers})
+      .subscribe(res=>{
+        resolve(res.json());
+      },(err)=>{
+        reject(err);
+      });
+    });
+  }
+  
 
 }

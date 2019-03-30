@@ -5,6 +5,7 @@ import { TabCoursePage } from '../tab-course/tab-course';
 import { TabServicePage } from '../tab-service/tab-service';
 import { TabArticlePage } from '../tab-article/tab-article';
 import { TabContactPage } from '../tab-contact/tab-contact';
+import { TabJobPage } from '../tab-job/tab-job';
 
 @IonicPage()
 @Component({
@@ -14,10 +15,11 @@ import { TabContactPage } from '../tab-contact/tab-contact';
 export class TabsPage {
 
   tab1Root:any = TabHomePage
-  tab2Root:any = TabCoursePage
-  tab3Root:any = TabServicePage
-  tab4Root:any = TabArticlePage
-  tab5Root:any = TabContactPage
+  tab2Root:any = TabJobPage
+  tab3Root:any = TabCoursePage
+  tab4Root:any = TabServicePage
+  tab5Root:any = TabArticlePage
+  tab6Root:any = TabContactPage
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
